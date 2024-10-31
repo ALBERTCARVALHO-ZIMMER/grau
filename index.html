@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Paytone+One&display=swap" rel="stylesheet">
+    <title>Quentinhas do GRAU</title>
+</head>
+<body>
+    <header>
+        <img src="img/quentinhas (1) (5).png" alt="Logo Quentinhas do Grau" class="logo">
+        <h5>QUENTINHAS DO</h5>
+        <h1>GRAU</h1>
+        <nav>
+            <ul>
+                <li><a href="#almoco">Almoço</a></li>
+                <li><a href="#jantar">Jantar</a></li>
+                <li><a href="#bebidas">Bebidas</a></li>
+                <li><a href="#sobremesas">Sobremesas</a></li>
+                <li><a href="#carrinho" onclick="openCart()">Carrinho (<span id="cart-count">0</h7>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="almoco">
+            <h2>Menu Almoço</h2>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="img/ARROZEFEIJAO.avif" alt="Arroz e Feijão">
+                    <h3>Arroz e Feijão</h3>
+                    <h7>R$ 15,00</h7>
+                    <button onclick="addToCart('Arroz e Feijão', 15)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/coxinhas-de-frango-assadas-na-marinada-de-mostarda-e-mel_2829-7274.avif" alt="Frango Grelhado">
+                    <h3>Frango Grelhado</h3>
+                    <h7>R$ 20,00</h7>
+                    <button onclick="addToCart('Frango Grelhado', 20)">Adicionar ao Carrinho</button>
+                </div>
+                <!-- Novos pratos -->
+                <div class="menu-item">
+                    <img src="img/salada.jpg" alt="Salada Vegetal">
+                    <h3>Salada Vegetal</h3>
+                    <h7>R$ 12,00</h7>
+                    <button onclick="addToCart('Salada Vegetal', 12)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/lasanha.jpg" alt="Lasanha">
+                    <h3>Lasanha bolonhesa</h3>
+                    <h7>R$ 25,00</h7>
+                    <button onclick="addToCart('Lasanha', 25)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/peixe.jpg" alt="Peixe Grelhado">
+                    <h3>Peixe Grelhado</h3>
+                    <h7>R$ 30,00</h7>
+                    <button onclick="addToCart('Peixe Grelhado', 30)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/feijoada.jpg" alt="Feijoada">
+                    <h3>Feijoada caseira</h3>
+                    <h7>R$ 35,00</h7>
+                    <button onclick="addToCart('Feijoada', 35)">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="jantar">
+            <h2>Menu Jantar</h2>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="img/prato-de-massa-na-tabua-com-garfo_23-2148357206.avif" alt="Macarrão à Carbonara">
+                    <h3>Macarrão à Carbonara</h3>
+                    <h7>R$ 25,00</h7>
+                    <button onclick="addToCart('Macarrão à Carbonara', 25)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/pizza-margarita-em-cima-da-mesa_140725-1201.avif" alt="Pizza Margherita">
+                    <h3>Pizza Margherita</h3>
+                    <h7>R$ 30,00</h7>
+                    <button onclick="addToCart('Pizza Margherita', 30)">Adicionar ao Carrinho</button>
+                </div>
+                <!-- Novos pratos -->
+                <div class="menu-item">
+                    <img src="img/strogonoff.jpg" alt="Strogonoff">
+                    <h3>Strogonoff de frango e batata</h3>
+                    <h7>R$ 28,00</h7>
+                    <button onclick="addToCart('Strogonoff', 28)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/risoto.jpg" alt="Risoto">
+                    <h3>Risoto de funghi</h3>
+                    <h7>R$ 32,00</h7>
+                    <button onclick="addToCart('Risoto', 32)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/sushi.jpg" alt="Sushi">
+                    <h3>Sushis da casa</h3>
+                    <h7>R$ 40,00</h7>
+                    <button onclick="addToCart('Sushi', 40)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/crepe.jpg" alt="Crepe">
+                    <h3>Crepe de nutella</h3>
+                    <h7>R$ 22,00</h7>
+                    <button onclick="addToCart('Crepe', 22)">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="bebidas" class="center">
+            <h2>Bebidas</h2>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="img/view-copo-do-alimento-superior-doce_1203-4023.avif" alt="Refrigerante">
+                    <h3>Refrigerante 500ml</h3>
+                    <h7>R$ 5,00</h7>
+                    <button onclick="addToCart('Refrigerante', 5)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/close-up-de-mao-segurando-garrafa-contra-fundo-branco_1048944-4413137.avif" alt="Água Mineral">
+                    <h3>Água Mineral</h3>
+                    <h7>R$ 3,00</h7>
+                    <button onclick="addToCart('Água Mineral', 3)">Adicionar ao Carrinho</button>
+                </div>
+                <!-- Novas bebidas -->
+                <div class="menu-item">
+                    <img src="img/suco.jpg" alt="Suco Natural">
+                    <h3>Suco Natural da fruta</h3>
+                    <h7>R$ 7,00</h7>
+                    <button onclick="addToCart('Suco Natural', 7)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/cerveja.jpg" alt="Cerveja">
+                    <h3>Cerveja artesanal</h3>
+                    <h7>R$ 10,00</h7>
+                    <button onclick="addToCart('Cerveja', 10)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/vinho.jpg" alt="Vinho">
+                    <h3>Vinho moet chandom</h3>
+                    <h7>R$ 50,00</h7>
+                    <button onclick="addToCart('Vinho', 50)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/zero.jpg" alt="Refrigerante Light">
+                    <h3>Refrigerante 500ml Light</h3>
+                    <h7>R$ 6,00</h7>
+                    <button onclick="addToCart('Refrigerante Light', 6)">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobremesas" class="center">
+            <h2>Sobremesas</h2>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="img/vista-frontal-do-conceito-de-bolo-de-chocolate-delicioso_23-2148801126.avif" alt="Bolo de Chocolate">
+                    <h3>Bolo de Chocolate</h3>
+                    <h7>R$ 10,00</h7>
+                    <button onclick="addToCart('Bolo de Chocolate', 10)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/pudim-de-sobremesa-em-branco_463209-67.avif" alt="Pudim">
+                    <h3>Pudim de leite</h3>
+                    <h7>R$ 12,00</h7>
+                    <button onclick="addToCart('Pudim', 12)">Adicionar ao Carrinho</button>
+                </div>
+                <!-- Novas sobremesas -->
+                <div class="menu-item">
+                    <img src="img/brigadeiro.jpg" alt="Brigadeiro">
+                    <h3>Brigadeiros variados</h3>
+                    <h7>R$ 5,00</h7>
+                    <button onclick="addToCart('Brigadeiro', 5)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/torta.jpg" alt="Torta de Limão">
+                    <h3>Torta de Limão</h3>
+                    <h7>R$ 8,00</h7>
+                    <button onclick="addToCart('Torta de Limão', 8)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/sorvete.jpg" alt="Sorvete">
+                    <h3>Sorvetes variados</h3>
+                    <h7>R$ 6,00</h7>
+                    <button onclick="addToCart('Sorvete', 6)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/pave.jpg" alt="Pavê">
+                    <h3>Pavê de chocolate</h3>
+                    <h7>R$ 15,00</h7>
+                    <button onclick="addToCart('Pavê', 15)">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="saibaMais">
+            <section id="nossa-historia" class="info-box">
+                <h2>Tudo por aqui é feito com AMOR!</h2>
+                <div class="info-box">
+                    <img src="img/retrato-de-mulheres-diversas-juntas_23-2151682134.avif" alt="Equipe" style="width: 300px; border-radius: 10px;">
+                    <p>Somos uma equipe apaixonada por comida caseira e com um compromisso com a qualidade e a satisfação dos nossos clientes. Nossa história começou com a ideia de trazer o sabor da comida feita em casa para todos.</p>
+                </div>
+            </section>
+    
+            <section id="localizacao" class="center info-box">
+                <h2>Nosso cantinho...</h2>
+                <div class="info-box">
+                    <img src="img/maos-de-vista-lateral-segurando-smartphone_23-2149764150.avif" alt="Localização" style="width: 300px; border-radius: 10px;">
+                    <p>Estamos localizados no coração da cidade, prontos para atender você!</p>
+                    <a href="https://maps.google.com/?q=SEU_ENDERECO" target="_blank">Olhe no Mapa!</a>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h8>Carrinho de Compras</h8>
+            <ul id="cart-items">()</ul>
+            <p id="total-price">Total: R$ 0,00</p>
+            <button id="checkout-button" onclick="checkout()">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <footer>
+        <h7>SIGA NAS REDES SOCIAIS @quentinhasdograu</h7>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
